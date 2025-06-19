@@ -29,6 +29,8 @@ services:
       - TRINO_USER=trino
       - TRINO_CATALOG=memory
       - TRINO_SCHEMA=default
+      # Alternative: Use DSN for authentication (e.g., with JWT token)
+      # - TRINO_DSN=https://trino:8080?catalog=memory&schema=default&accessToken=your_jwt_token_here
       - MCP_TRANSPORT=http
       - MCP_PORT=9097
     depends_on:

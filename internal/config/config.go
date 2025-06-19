@@ -14,6 +14,7 @@ type TrinoConfig struct {
 	Port              int
 	User              string
 	Password          string
+	DSN               string        // Full DSN URL (takes precedence if set)
 	Catalog           string
 	Schema            string
 	Scheme            string
@@ -63,6 +64,7 @@ func NewTrinoConfig() *TrinoConfig {
 		Port:              port,
 		User:              getEnv("TRINO_USER", "trino"),
 		Password:          getEnv("TRINO_PASSWORD", ""),
+		DSN:               getEnv("TRINO_DSN", ""),
 		Catalog:           getEnv("TRINO_CATALOG", "memory"),
 		Schema:            getEnv("TRINO_SCHEMA", "default"),
 		Scheme:            scheme,

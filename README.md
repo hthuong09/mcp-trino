@@ -463,6 +463,7 @@ The server can be configured using the following environment variables:
 | TRINO_PORT             | Trino server port                 | 8080      |
 | TRINO_USER             | Trino user                        | trino     |
 | TRINO_PASSWORD         | Trino password                    | (empty)   |
+| TRINO_DSN              | Full Trino DSN URL (takes precedence if set) | (empty)   |
 | TRINO_CATALOG          | Default catalog                   | memory    |
 | TRINO_SCHEMA           | Default schema                    | default   |
 | TRINO_SCHEME           | Connection scheme (http/https)    | https     |
